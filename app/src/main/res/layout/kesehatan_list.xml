@@ -8,7 +8,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/container"
+        android:backgroundTint="@color/white">
 
         <TextView
             android:id="@+id/tvTanggal"
@@ -16,7 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="TextView"
+            android:textColor="@color/black"
+            android:text="Date"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
+            android:textColor="@color/black"
             android:text="Berat badan : "
             android:textSize="16sp"
             android:textStyle="bold"
@@ -36,17 +42,30 @@
             android:id="@+id/tvBeratBadan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="10"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/beratBadanLabel"
             app:layout_constraintTop_toTopOf="@+id/beratBadanLabel" />
+
+        <TextView
+            android:id="@+id/ketBB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/black"
+            android:text="kg"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/tvBeratBadan"
+            app:layout_constraintTop_toTopOf="@+id/tvBeratBadan" />
 
         <TextView
             android:id="@+id/tekananLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/black"
             android:text="Tekanan darah : "
             android:textSize="16sp"
             android:textStyle="bold"
@@ -57,8 +76,9 @@
             android:id="@+id/tvTekanan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="10"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/tekananLabel"
             app:layout_constraintTop_toTopOf="@+id/tekananLabel" />
@@ -67,9 +87,12 @@
             android:id="@+id/tvCatatan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
             android:text="asdasdasdasdasd"
             android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tekananLabel"
             app:layout_constraintTop_toBottomOf="@+id/tekananLabel" />
 
