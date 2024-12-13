@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "uas.c14220049.app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "uas.c14220049.app"
-        minSdk = 31
-        targetSdk = 34
+        minSdk = 33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
