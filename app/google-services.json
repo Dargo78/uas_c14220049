@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "132907514140",
+    "project_id": "uas-c14220049",
+    "storage_bucket": "uas-c14220049.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132907514140:android:80bf81aa316180776522d9",
+        "android_client_info": {
+          "package_name": "uas.c14220049.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC85jskDOuWrAjrUndNgIwwMW07hY_UxVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
