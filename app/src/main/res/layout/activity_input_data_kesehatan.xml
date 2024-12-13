@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etBB"
-        android:hint="Berat Badan" />
+        android:hint="Berat Badan (dalam kg)" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
