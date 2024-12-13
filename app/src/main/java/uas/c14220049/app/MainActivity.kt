@@ -19,6 +19,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import uas.c14220049.app.database.DataKesehatan
 import uas.c14220049.app.database.DataKesehatanDB
+import kotlin.math.tan
 
 class MainActivity : AppCompatActivity() {
     private lateinit var RoomDB: DataKesehatanDB
@@ -80,6 +81,34 @@ class MainActivity : AppCompatActivity() {
                         }
                 }
             }
+        }
+
+        val _fabDownload = findViewById<FloatingActionButton>(R.id.fabDownload)
+        _fabDownload.setOnClickListener {
+            FirebaseDB.collection("DataKesehatan").get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        CoroutineScope(Dispatchers.IO).async {
+                            RoomDB.dataKesehatanDAO().insert(
+                                DataKesehatan(
+                                    id = document.id.toInt(),
+                                    tanggal = document.get("tanggal").toString(),
+                                    bb = document.get("bb").toString().toInt(),
+                                    tekanan = document.get("tekanan").toString().toInt(),
+                                    catatan = document.get("catatan").toString()
+                                )
+                            )
+                        }
+                    }
+                    CoroutineScope(Dispatchers.Main).async {
+                        val daftarKesehatan = RoomDB.dataKesehatanDAO().selectAll()
+                        adapterKesehatan.isiData(daftarKesehatan)
+                    }
+                    successDialog("Berhasil download data dari firebase").show()
+                }
+                .addOnFailureListener {
+                    errorDialog("Gagal download data dari firebase").show()
+                }
         }
     }
 
