@@ -34,4 +34,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/vector_upload"
+        app:layout_constraintBottom_toBottomOf="@+id/fabAdd"
+        app:layout_constraintEnd_toStartOf="@+id/fabAdd" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/vector_download"
+        app:layout_constraintBottom_toBottomOf="@+id/fabUpload"
+        app:layout_constraintEnd_toStartOf="@+id/fabUpload" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
